@@ -1,10 +1,11 @@
 import streamlit as st
-from pyresparser import ResumeParser
 import pandas as pd
 
 import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
+from pyresparser import ResumeParser
+
 
 def parse():
     st.header("CV Extractor")
