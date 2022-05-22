@@ -3,8 +3,8 @@ from pyresparser import ResumeParser
 import nltk
 import pandas as pd
 
-nltk.download('stopwords')
-
+# nltk.download('stopwords')
+from nltk.corpus import stopwords
 def parse():
     st.header("CV Extractor")
     
