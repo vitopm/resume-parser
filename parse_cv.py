@@ -4,8 +4,7 @@ import pandas as pd
 
 import nltk
 nltk.download('stopwords')
-
-# from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 
 def parse():
     st.header("CV Extractor")
