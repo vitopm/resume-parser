@@ -1,5 +1,7 @@
 import streamlit as st
 from pyresparser import ResumeParser
+import nltk
+# nltk.download('stopwords')
 import pandas as pd
 
 def parse():
