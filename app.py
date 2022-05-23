@@ -8,7 +8,7 @@ import streamlit as st
 from parse_cv import parse
 from home import description, about
 
-st.image("asset\image\gambar-resume.jpg")
+st.image("asset/image/gambar-resume.jpg")
 st.title("📑Resume Parser")
 st.write("------------")
 page = st.selectbox('Navigate', ['Home', 'Parse my CV', 'About us'])
