@@ -1,7 +1,7 @@
 import streamlit as st
 
 def description():
-    st.header("Welcome to our resume parser!")
+    st.header("👋Welcome to our resume parser!")
     st.write(""" 
 Dicta voluptatem laudantium ut fugiat quo porro aperiam facere. Quo molestiae neque mollitia. Voluptatem aut enim est sit velit.
 
@@ -16,7 +16,7 @@ Aut aut adipisci dolor. Non aut ipsam tenetur. Dolor eum nostrum aut nostrum dol
     """)
 
 def about():
-    st.header("We are students")
+    st.header("👩‍🎓👨‍🎓We are students")
     st.write(""" 
 Dicta voluptatem laudantium ut fugiat quo porro aperiam facere. Quo molestiae neque mollitia. Voluptatem aut enim est sit velit.
 
