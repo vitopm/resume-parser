@@ -14,7 +14,19 @@ def description():
     """)
 
 def about():
-    st.header("👩‍🎓👨‍🎓We are a team of students")
+    st.header("We are a team of students")
+    left,right = st.columns([1,8])
+
+    with left:
+        st.image("asset/image/crying_kid.gif")
+
+    with right:
+        st.subheader("👩‍🎓👨‍🎓*tireless students to be exact*")
+    
+    
+
+    st.write("---")
+
     colpic1, coldesc1 = st.columns([1,3])
     with colpic1:
         st.image("asset/image/cheryl.jpeg")
@@ -26,13 +38,10 @@ def about():
         A passionate student with relentless idea to make everything around her better in everyway.
 
         """)
-
-    colpic2, coldesc2 = st.columns([1,3])
-
+    st.write("---")
+    
+    colpic2, coldesc2 = st.columns([3,1])
     with colpic2:
-        st.image("asset/image/michelle.jpeg")
-
-    with coldesc2:
         st.subheader("Michelle A. Guntoro")
         
         st.write("""
@@ -40,8 +49,13 @@ def about():
         Giving up on a great idea is not on her dictionary. Her team management skills is the main driver of the project. 
         """)
 
-    colpic3, coldesc3= st.columns([1,3])
+    with coldesc2:
+        st.image("asset/image/michelle.jpeg")
+        
 
+    st.write("---")
+    
+    colpic3, coldesc3= st.columns([1,3])
     with colpic3:
         st.image("asset/image/vito.jpeg")
         
@@ -54,3 +68,4 @@ def about():
         Idea runs in his blood. Should he be born a hundred years ago, he could've been the picasso of the century.
 
         """)
+    st.write("---")
