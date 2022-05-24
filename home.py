@@ -14,16 +14,43 @@ def description():
     """)
 
 def about():
-    st.header("👩‍🎓👨‍🎓We are students")
-    st.write(""" 
-Dicta voluptatem laudantium ut fugiat quo porro aperiam facere. Quo molestiae neque mollitia. Voluptatem aut enim est sit velit.
+    st.header("👩‍🎓👨‍🎓We are a team of students")
+    colpic1, coldesc1 = st.columns([1,3])
+    with colpic1:
+        st.image("asset/image/cheryl.jpeg")
 
-Repellendus molestias est est aliquam. Quis distinctio quam quia. Id beatae in omnis ut eos.
+    with coldesc1:
+        st.subheader("Cheryl Almeira")
+        st.write("""
 
-Cum inventore possimus id est quas non assumenda omnis. Molestiae placeat non aut sequi quisquam rerum non. Itaque ut molestias odit labore.
+        A passionate student with relentless idea to make everything around her better in everyway.
 
-Sequi molestiae tempore optio error et. Saepe distinctio vitae officiis odio fugit. Rerum quo temporibus dolorem totam sed.
+        """)
 
-Aut aut adipisci dolor. Non aut ipsam tenetur. Dolor eum nostrum aut nostrum dolore. Aut dicta id veritatis. Culpa aliquid beatae voluptate voluptates voluptates consequatur tempora assumenda. Sequi esse commodi temporibus fuga aliquid sit fugit.
+    colpic2, coldesc2 = st.columns([1,3])
 
-    """)
+    with colpic2:
+        st.image("asset/image/michelle.jpeg")
+
+    with coldesc2:
+        st.subheader("Michelle A. Guntoro")
+        
+        st.write("""
+        
+        Giving up on a great idea is not on her dictionary. Her team management skills is the main driver of the project. 
+        """)
+
+    colpic3, coldesc3= st.columns([1,3])
+
+    with colpic3:
+        st.image("asset/image/vito.jpeg")
+        
+    with coldesc3:
+
+        st.subheader("Vito P. Minardi")
+
+        st.write("""
+        
+        Idea runs in his blood. Should he be born a hundred years ago, he could've been the picasso of the century.
+
+        """)

@@ -11,11 +11,11 @@ from home import description, about
 st.image("asset/image/gambar-resume.jpg")
 st.title("📑Resume Parser")
 st.write("------------")
-page = st.selectbox('Navigate', ['Home', 'Parse my CV', 'About us'])
+page = st.selectbox('Navigate', ['Home', 'Parse my resume', 'About us'])
 
 if page =="Home":
     description()
-elif page =="Parse my CV":
+elif page =="Parse my resume":
     parse()
 elif page == "About us":
     about()

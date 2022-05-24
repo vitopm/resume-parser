@@ -8,10 +8,10 @@ from pyresparser import ResumeParser
 
 
 def parse():
-    st.header("🧐CV Extractor")
+    st.header("🧐Resume Extractor")
     
     file = st.file_uploader(
-        'Upload your CV in PDF',
+        'Upload your Resume in PDF',
         type = "pdf",
         accept_multiple_files = False
         )
