@@ -1,6 +1,7 @@
 from numpy import empty
 import streamlit as st
 import pandas as pd
+import time
 
 import nltk
 nltk.download('stopwords')
@@ -18,7 +19,8 @@ def parse():
         )
     if file is not None:
         # st.write("yooo")
-        with st.spinner(text='***Our evil robot is reading your resume***'):
+        with st.spinner(text='🤖***Our evil robot is reading your resume***'):
+            time.sleep(2)
             data = ResumeParser(file).get_extracted_data()
             file_details = {
                 "filename":file.name, 
