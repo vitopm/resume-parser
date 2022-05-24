@@ -67,8 +67,10 @@ def parse():
                 st.success("Your resume is good to go!🥳🎉")
             elif num_of_error <= 3:
                 st.warning("Your resume has a few errors")
-            else:
+            elif num_of_error <=8:
                 st.error("Your resumes contains more than 3 errors, it needs to be fixed!")
+            else:
+                st.error("Are you submitting empty pdf? Resubmit your resume again!")
                     
     # data = ResumeParser('CV.pdf').get_extracted_data()
     # data
