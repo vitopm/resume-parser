@@ -14,15 +14,14 @@ def description():
     """)
 
 def about():
-    st.header("We are a team of students")
+    st.header("We are a team of students👩‍🎓👨‍🎓")
     left,right = st.columns([1,8])
 
     with left:
         st.image("asset/image/crying_kid.gif")
 
     with right:
-        st.subheader("👩‍🎓👨‍🎓*tireless students to be exact*")
-    
+        st.subheader("*sleepy students to be exact*")
     
 
     st.write("---")

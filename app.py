@@ -8,14 +8,19 @@ import streamlit as st
 from parse_cv import parse
 from home import description, about
 
-st.image("asset/image/gambar-resume.jpg")
-st.title("📑Resume Parser")
-st.write("------------")
-page = st.selectbox('Navigate', ['Home', 'Parse my resume', 'About us'])
+def main():
+    st.image("asset/image/gambar-resume.jpg")
+    st.title("📑Resume Parser")
+    st.write("------------")
+    page = st.selectbox('Navigate', ['Home', 'Parse my resume', 'About us'])
 
-if page =="Home":
-    description()
-elif page =="Parse my resume":
-    parse()
-elif page == "About us":
-    about()
+    if page =="Home":
+        description()
+    elif page =="Parse my resume":
+        parse()
+    elif page == "About us":
+        about()
+
+
+if __name__ == '__main__':
+    main()
