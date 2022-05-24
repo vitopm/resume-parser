@@ -34,12 +34,19 @@ def parse():
             
             st.header("Extracted data")
             # st.json(data)
-            
+
+            # st.info("""
+            # Scroll down to see your result or click the button here
+            # """)
+            st.markdown("[Click here to go to Result](#result)", unsafe_allow_html=True)
+            # link = '[GitHub](http://github.com)'
+            # st.markdown(link, unsafe_allow_html=True)
+
             num_of_error = 0 #max 9
 
             for key, values in data.items():
                 key = key.replace("_", " ").capitalize()
-                st.subheader(key)
+                st.write("##### {key}".format(key=key))
                 if type(values) == list and len(values) > 5:
                     count = 1
                     with st.expander("Detailed information", expanded=False):
