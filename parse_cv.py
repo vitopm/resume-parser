@@ -20,7 +20,7 @@ def parse():
     if file is not None:
         # st.write("yooo")
         with st.spinner(text='🤖***Our evil robot is reading your resume***'):
-            time.sleep(2)
+            # time.sleep(2)
             data = ResumeParser(file).get_extracted_data()
             file_details = {
                 "filename":file.name, 
@@ -38,7 +38,7 @@ def parse():
             # st.info("""
             # Scroll down to see your result or click the button here
             # """)
-            st.markdown("[Click here to go to Result](#result)", unsafe_allow_html=True)
+            st.markdown("[**Click here to go to Result below**](#result)", unsafe_allow_html=True)
             # link = '[GitHub](http://github.com)'
             # st.markdown(link, unsafe_allow_html=True)
 
@@ -47,6 +47,7 @@ def parse():
             for key, values in data.items():
                 key = key.replace("_", " ").capitalize()
                 st.write("##### {key}:".format(key=key))
+                
                 if type(values) == list and len(values) > 5:
                     count = 1
                     with st.expander("Detailed information", expanded=False):
@@ -66,16 +67,17 @@ def parse():
                 if values == None:
                     st.warning("Our system can't detect information regarding your " + key.lower())
                     num_of_error += 1
-            
+                st.write("")
+
             st.write("---")
 
             st.header("Result")
             if num_of_error == 0:
                 st.success("Your resume is good to go!🥳🎉")
             elif num_of_error <= 3:
-                st.warning("Your resume has a few errors")
+                st.warning("Your resume has several few errors")
             elif num_of_error <=8:
-                st.error("Your resumes contains more than 3 errors, it needs to be fixed!")
+                st.error("Your resumes contains more than {errors} errors, it needs to be fixed!".format(errors = num_of_error))
             else:
                 st.error("Are you submitting empty pdf? Resubmit your resume again!")
                     
