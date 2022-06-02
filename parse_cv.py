@@ -31,7 +31,7 @@ def parse():
             st.write("**File name**: " + file_details["filename"])
             st.write("**File type**: " + file_details["filetype"])
             st.write("**File size**: " + str(file_details["filesize"]) + " bytes" )
-            
+            st.write("---")
             st.header("Extracted data")
             # st.json(data)
 
@@ -46,7 +46,7 @@ def parse():
 
             for key, values in data.items():
                 key = key.replace("_", " ").capitalize()
-                st.write("##### {key}".format(key=key))
+                st.write("##### {key}:".format(key=key))
                 if type(values) == list and len(values) > 5:
                     count = 1
                     with st.expander("Detailed information", expanded=False):
