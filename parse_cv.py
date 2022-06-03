@@ -20,7 +20,7 @@ def parse():
         # st.write("yooo")
         with st.spinner(text='🤖***Our evil robot is reading your resume***'):
             # time.sleep(2)
-            data = ResumeParser(file).get_extracted_data()
+            
             file_details = {
                 "filename":file.name, 
                 "filetype":file.type,
@@ -40,8 +40,14 @@ def parse():
             st.markdown("[**Click here to go to Result below**](#result)", unsafe_allow_html=True)
             # link = '[GitHub](http://github.com)'
             # st.markdown(link, unsafe_allow_html=True)
+            
+            data = ResumeParser(file).get_extracted_data()
+            data.pop("designation")
+            data.pop("company_names")
+            data.pop("total_experience")
 
             num_of_error = 0 #max 9
+
 
             for key, values in data.items():
                 key = key.replace("_", " ").capitalize()
@@ -74,7 +80,7 @@ def parse():
             if num_of_error == 0:
                 st.success("Your resume is good to go!🥳🎉")
             elif num_of_error <= 3:
-                st.warning("Your resume has several few errors")
+                st.warning("Your resume has {error} error(s)".format(error = num_of_error))
             elif num_of_error <=8:
                 st.error("Your resumes contains more than {errors} errors, it needs to be fixed!".format(errors = num_of_error))
             else:
