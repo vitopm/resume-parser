@@ -53,9 +53,9 @@ def parse():
                         for value in values:
                             st.write(str(count) + ". " + str(value))
                             count += 1
-                    if len(values) > 10:
-                        st.warning("Are you sure they will read this many?")
-                        num_of_error += 1
+                    # if len(values) > 10:
+                    #     st.warning("Are you sure they will read this many?")
+                    #     num_of_error += 1
                 elif type(values) == list and len(values) < 5:
                     count = 1
                     for value in values:
